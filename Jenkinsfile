@@ -45,7 +45,7 @@ pipeline {
                 //implement Kubernetes deployment here
 		kubernetesDeploy{
 			kubeconfigId: 'kubecred',
-			configs: 'manifests.yml',
+			configs: 'deployment.yml',
 			enableConfigSubstitution: true
             }
         }
