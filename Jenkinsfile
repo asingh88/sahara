@@ -43,9 +43,6 @@ pipeline {
                 input 'Deploy to Production?'
                 milestone(1)
                 //implement Kubernetes deployment here
-		script {
-			cd kube-manifests/ 		
-		}
         	kubernetesDeploy{
                         kubeconfigId: 'kubeconfig',
                         configs: 'deployment.yml',
