@@ -43,9 +43,8 @@ pipeline {
                 input 'Deploy to Production?'
                 milestone(1)
                 //implement Kubernetes deployment here
-        	kubernetesDeploy{
-                        kubeconfigId: kubeconfig,
-                        configs: 'deployment.yml',
+        	kubernetesDeploy{kubeconfigId: 'kubeconfig',
+                        configs: deployment.yml,
                         enableConfigSubstitution: true
 			}
 		}
